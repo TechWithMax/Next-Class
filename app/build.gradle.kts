@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.ahofama.nextclass"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.ahofama.nextclass"
