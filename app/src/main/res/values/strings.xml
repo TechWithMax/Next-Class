@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Next Class</string>
+    <string name="onboarding_image_description">onboarding_image</string>
+    <string name="onboarding_title">Welcome to Next Class</string>
+    <string name="onboarding_description">Learn anytime, anywhere. with our personalized classes.</string>
+    <string name="get_started">Get Started</string>
 </resources>
