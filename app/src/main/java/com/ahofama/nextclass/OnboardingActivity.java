@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class OnboardingActivity extends AppCompatActivity {
 
     // 🔑 Toggle this flag
-    private static final boolean ALWAYS_SHOW_ONBOARDING = true;
+    private static final boolean ALWAYS_SHOW_ONBOARDING = false;
     // true  = show onboarding every time
     // false = show onboarding only once
 

@@ -32,6 +32,12 @@ public class DBHelper extends SQLiteOpenHelper {
                 COL_PASSWORD + " TEXT)");
     }
 
+    public Cursor getUserDetails(String username) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("SELECT username, email FROM users WHERE username = ?", new String[]{username});
+    }
+
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // Drop and recreate if upgrading (simple approach)

@@ -1,6 +1,8 @@
 package com.ahofama.nextclass;
 
 import static androidx.databinding.DataBindingUtil.setContentView;
+
+import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -38,15 +40,23 @@ public class LoginPageActivity extends AppCompatActivity{
 
         // Login button
         btnLogin.setOnClickListener(v -> {
-            String user = etUsername.getText().toString().trim();
+            String username = etUsername.getText().toString().trim();
             String pass = etPassword.getText().toString().trim();
 
-            if (dbHelper.checkUser(user, pass)) {
-                Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this, DashboardActivity.class));
-                finish();
+            if (dbHelper.checkUser(username, pass)) {
+                // ✅ Get user details (username + email)
+                Cursor cursor = dbHelper.getUserDetails(username);
+                if (cursor != null && cursor.moveToFirst()) {
+                    String email = cursor.getString(cursor.getColumnIndexOrThrow("email"));
+
+                    Intent intent = new Intent(LoginPageActivity.this, DashboardActivity.class);
+                    intent.putExtra("username", username);
+                    intent.putExtra("email", email);
+                    startActivity(intent);
+                    finish();
+                }
             } else {
-                Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginPageActivity.this, "Invalid login", Toast.LENGTH_SHORT).show();
             }
         });
 

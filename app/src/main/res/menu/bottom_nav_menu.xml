@@ -4,17 +4,21 @@
     <item android:title="@string/home"
         android:icon="@drawable/ic_home"
         android:id="@+id/home"/>
+
     <!--<item android:title="@string/search"
         android:icon="@drawable/ic_search"
         android:id="@+id/search"/>-->
-    <item android:title="@string/instructors"
-        android:icon="@drawable/ic_groups"
-        android:id="@+id/instructors"/>
+
+    <item android:title="@string/courses"
+        android:icon="@drawable/ic_courses"
+        android:id="@+id/courses"/>
+
     <!--<item android:title="@string/inbox"
         android:icon="@drawable/ic_message"
         android:id="@+id/inbox"/>-->
-    <item android:title="@string/profile"
-        android:icon="@drawable/ic_person"
-        android:id="@+id/profile"/>
+
+    <item android:title="@string/wishlist"
+        android:icon="@drawable/ic_favorite"
+        android:id="@+id/wishlist"/>
 
 </menu>

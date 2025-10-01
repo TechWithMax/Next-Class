@@ -114,7 +114,7 @@ public class ProfileFragment extends Fragment {
     }
 
     private void redirectToLogin() {
-        Intent intent = new Intent(requireContext(), LoginActivity.class);
+        Intent intent = new Intent(requireContext(), LoginPageActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         requireActivity().finish(); // finish parent activity

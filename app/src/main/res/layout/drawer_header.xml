@@ -1,21 +1,49 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="160dp"
-    android:gravity="center"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:gravity="bottom"
+    android:padding="20dp"
+    tools:context=".DashboardActivity"
     android:background="?attr/colorPrimary">
 
-    <ImageView
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:src="@mipmap/ic_launcher_round"
-        android:contentDescription="Profile picture" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="0dp">
+
+        <ImageView
+            android:id="@+id/userImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_person"/>
+
+    </androidx.cardview.widget.CardView>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/txtUsername"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome User"
+        android:text="User Name"
+        android:textStyle="bold"
         android:textColor="@android:color/white"
         android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/user_email"
+        android:textStyle="bold"
+        android:textColor="#F3FDFDAD"
+        android:textSize="13sp"
         android:layout_marginTop="8dp"/>
 </LinearLayout>

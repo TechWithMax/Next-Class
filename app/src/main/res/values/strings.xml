@@ -12,7 +12,7 @@
     <string name="welcome_text">Welcome To The Future of Learning.</string>
     <string name="sign_in_email">Sign in with Email</string>
     <string name="dont_have_account">Don\'t have an account?</string>
-    <string name="sign_up">Sign up</string>
+    <string name="sign_up"> Sign up</string>
     <string name="default_web_client_id">744221201058-jkbsf4sm3m3802e5n9nhje5b7lebsgv3.apps.googleusercontent.com</string>
     <string name="open_nav">Open Navigation Drawer</string>
     <string name="close_nav">Close Navigation Drawer</string>
@@ -25,7 +25,7 @@
     <string name="wishlist">Wishlist</string>
     <string name="my_course">Course\n</string>
     <string name="explore">Explore</string>
-    <string name="profile">profile\n</string>
+    <string name="profile">Profile</string>
 
     <string name="explore_page_text">This is the Explore Page</string>
     <string name="welcome_to_next_class">Welcome to Next Class</string>
@@ -58,9 +58,15 @@
     <string name="start_conversation">Start Conversation</string>
     <string name="emoji">emoji</string>
     <string name="send_message">send message</string>
-    <string name="typing">Typinp</string>
+    <string name="typing">Typing</string>
     <string name="more_options">More</string>
     <string name="already_have_an_account">Already have an account!</string>
+    <string name="courses">Courses</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="log_out">Log Out</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="user_email">User Email</string>
 
 
 </resources>
