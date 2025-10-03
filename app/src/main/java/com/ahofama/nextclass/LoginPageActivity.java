@@ -2,6 +2,7 @@ package com.ahofama.nextclass;
 
 import static androidx.databinding.DataBindingUtil.setContentView;
 
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -61,6 +62,14 @@ public class LoginPageActivity extends AppCompatActivity{
         });
 
         signUpText = findViewById(R.id.sign_up);
+
+        // Example after successful login
+        SharedPreferences prefs = getSharedPreferences("user_session", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean("isLoggedIn", true);
+        editor.putString("username", "Admin"); // example, store user data
+        editor.apply();
+
         // Navigate to RegisterActivity
         signUpText.setOnClickListener(v -> {
             Intent intent = new Intent(LoginPageActivity.this, RegisterActivity.class);

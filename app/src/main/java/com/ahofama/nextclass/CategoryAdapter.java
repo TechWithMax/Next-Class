@@ -12,11 +12,11 @@ import java.util.List;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder> {
 
-    private List<ExploreFragment.Category> categories = new ArrayList<>();
+    private List<ExploreFragment2.Category> categories = new ArrayList<>();
     private OnCategoryClickListener listener;
 
     public interface OnCategoryClickListener {
-        void onCategoryClick(ExploreFragment.Category category);
+        void onCategoryClick(ExploreFragment2.Category category);
     }
 
     public CategoryAdapter(OnCategoryClickListener listener) {
@@ -32,7 +32,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
     @Override
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
-        ExploreFragment.Category category = categories.get(position);
+        ExploreFragment2.Category category = categories.get(position);
         holder.bind(category, listener);
     }
 
@@ -41,7 +41,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         return categories.size();
     }
 
-    public void updateData(List<ExploreFragment.Category> newCategories) {
+    public void updateData(List<ExploreFragment2.Category> newCategories) {
         this.categories = new ArrayList<>(newCategories);
         notifyDataSetChanged();
     }
@@ -56,7 +56,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
             categoryName = itemView.findViewById(R.id.categoryName);
         }
 
-        public void bind(ExploreFragment.Category category, OnCategoryClickListener listener) {
+        public void bind(ExploreFragment2.Category category, OnCategoryClickListener listener) {
             categoryIcon.setImageResource(category.getIconRes());
             categoryName.setText(category.getName());
 

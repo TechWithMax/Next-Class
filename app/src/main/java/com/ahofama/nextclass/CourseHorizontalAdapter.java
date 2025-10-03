@@ -12,11 +12,11 @@ import java.util.List;
 
 public class CourseHorizontalAdapter extends RecyclerView.Adapter<CourseHorizontalAdapter.CourseViewHolder> {
 
-    private List<ExploreFragment.Course> courses = new ArrayList<>();
+    private List<ExploreFragment2.Course> courses = new ArrayList<>();
     private OnCourseClickListener listener;
 
     public interface OnCourseClickListener {
-        void onCourseClick(ExploreFragment.Course course);
+        void onCourseClick(ExploreFragment2.Course course);
     }
 
     public CourseHorizontalAdapter(OnCourseClickListener listener) {
@@ -32,7 +32,7 @@ public class CourseHorizontalAdapter extends RecyclerView.Adapter<CourseHorizont
 
     @Override
     public void onBindViewHolder(@NonNull CourseViewHolder holder, int position) {
-        ExploreFragment.Course course = courses.get(position);
+        ExploreFragment2.Course course = courses.get(position);
         holder.bind(course, listener);
     }
 
@@ -41,7 +41,7 @@ public class CourseHorizontalAdapter extends RecyclerView.Adapter<CourseHorizont
         return courses.size();
     }
 
-    public void updateData(List<ExploreFragment.Course> newCourses) {
+    public void updateData(List<ExploreFragment2.Course> newCourses) {
         this.courses = new ArrayList<>(newCourses);
         notifyDataSetChanged();
     }
@@ -60,7 +60,7 @@ public class CourseHorizontalAdapter extends RecyclerView.Adapter<CourseHorizont
             courseRating = itemView.findViewById(R.id.courseRating);
         }
 
-        public void bind(ExploreFragment.Course course, OnCourseClickListener listener) {
+        public void bind(ExploreFragment2.Course course, OnCourseClickListener listener) {
             courseImage.setImageResource(course.getImageRes());
             courseTitle.setText(course.getTitle());
             courseInstructor.setText(course.getInstructor());

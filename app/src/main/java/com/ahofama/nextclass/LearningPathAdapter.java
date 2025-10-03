@@ -12,11 +12,11 @@ import java.util.List;
 
 public class LearningPathAdapter extends RecyclerView.Adapter<LearningPathAdapter.LearningPathViewHolder> {
 
-    private List<ExploreFragment.LearningPath> learningPaths = new ArrayList<>();
+    private List<ExploreFragment2.LearningPath> learningPaths = new ArrayList<>();
     private OnLearningPathClickListener listener;
 
     public interface OnLearningPathClickListener {
-        void onLearningPathClick(ExploreFragment.LearningPath path);
+        void onLearningPathClick(ExploreFragment2.LearningPath path);
     }
 
     public LearningPathAdapter(OnLearningPathClickListener listener) {
@@ -32,7 +32,7 @@ public class LearningPathAdapter extends RecyclerView.Adapter<LearningPathAdapte
 
     @Override
     public void onBindViewHolder(@NonNull LearningPathViewHolder holder, int position) {
-        ExploreFragment.LearningPath path = learningPaths.get(position);
+        ExploreFragment2.LearningPath path = learningPaths.get(position);
         holder.bind(path, listener);
     }
 
@@ -41,7 +41,7 @@ public class LearningPathAdapter extends RecyclerView.Adapter<LearningPathAdapte
         return learningPaths.size();
     }
 
-    public void updateData(List<ExploreFragment.LearningPath> newPaths) {
+    public void updateData(List<ExploreFragment2.LearningPath> newPaths) {
         this.learningPaths = new ArrayList<>(newPaths);
         notifyDataSetChanged();
     }
@@ -60,7 +60,7 @@ public class LearningPathAdapter extends RecyclerView.Adapter<LearningPathAdapte
             courseCount = itemView.findViewById(R.id.courseCount);
         }
 
-        public void bind(ExploreFragment.LearningPath path, OnLearningPathClickListener listener) {
+        public void bind(ExploreFragment2.LearningPath path, OnLearningPathClickListener listener) {
             pathIcon.setImageResource(path.getIconRes());
             pathTitle.setText(path.getTitle());
             pathDescription.setText(path.getDescription());

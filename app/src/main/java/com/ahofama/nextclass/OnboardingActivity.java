@@ -63,7 +63,7 @@ public class OnboardingActivity extends AppCompatActivity {
     }
 
     private void navigateToMain() {
-        Intent intent = new Intent(OnboardingActivity.this, LoginPageActivity.class);
+        Intent intent = new Intent(OnboardingActivity.this, DashboardActivity.class);
         startActivity(intent);
         finish();
     }

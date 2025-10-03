@@ -12,16 +12,16 @@ import java.util.List;
 
 public class CourseVerticalAdapter extends RecyclerView.Adapter<CourseVerticalAdapter.CourseViewHolder> {
 
-    private List<ExploreFragment.Course> courses = new ArrayList<>();
+    private List<ExploreFragment2.Course> courses = new ArrayList<>();
     private OnCourseClickListener courseListener;
     private OnBookmarkClickListener bookmarkListener;
 
     public interface OnCourseClickListener {
-        void onCourseClick(ExploreFragment.Course course);
+        void onCourseClick(ExploreFragment2.Course course);
     }
 
     public interface OnBookmarkClickListener {
-        void onBookmarkClick(ExploreFragment.Course course);
+        void onBookmarkClick(ExploreFragment2.Course course);
     }
 
     public CourseVerticalAdapter(OnCourseClickListener courseListener, OnBookmarkClickListener bookmarkListener) {
@@ -38,7 +38,7 @@ public class CourseVerticalAdapter extends RecyclerView.Adapter<CourseVerticalAd
 
     @Override
     public void onBindViewHolder(@NonNull CourseViewHolder holder, int position) {
-        ExploreFragment.Course course = courses.get(position);
+        ExploreFragment2.Course course = courses.get(position);
         holder.bind(course, courseListener, bookmarkListener);
     }
 
@@ -47,7 +47,7 @@ public class CourseVerticalAdapter extends RecyclerView.Adapter<CourseVerticalAd
         return courses.size();
     }
 
-    public void updateData(List<ExploreFragment.Course> newCourses) {
+    public void updateData(List<ExploreFragment2.Course> newCourses) {
         this.courses = new ArrayList<>(newCourses);
         notifyDataSetChanged();
     }
@@ -72,7 +72,7 @@ public class CourseVerticalAdapter extends RecyclerView.Adapter<CourseVerticalAd
             bookmarkIcon = itemView.findViewById(R.id.bookmarkIcon);
         }
 
-        public void bind(ExploreFragment.Course course, OnCourseClickListener courseListener, OnBookmarkClickListener bookmarkListener) {
+        public void bind(ExploreFragment2.Course course, OnCourseClickListener courseListener, OnBookmarkClickListener bookmarkListener) {
             courseImage.setImageResource(course.getImageRes());
             courseTitle.setText(course.getTitle());
             courseDescription.setText(course.getDescription());

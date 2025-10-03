@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="@string/home"
-        android:icon="@drawable/ic_home"
-        android:id="@+id/home"/>
+    <item android:title="@string/explore"
+        android:icon="@drawable/ic_explore"
+        android:id="@+id/explore"/>
 
     <!--<item android:title="@string/search"
         android:icon="@drawable/ic_search"

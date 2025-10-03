@@ -2,27 +2,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <group android:id="@+id/group2">
+        <item android:id="@+id/navDashboard"
+            android:title="@string/dashboard"
+            android:icon="@drawable/dashboard"/>
+
         <item android:id="@+id/navProfile"
             android:title="@string/profile"
             android:icon="@drawable/ic_person"/>
 
-        <item android:id="@+id/navInstructors"
-            android:title="@string/instructors"
-            android:icon="@drawable/ic_groups"/>
-    </group>
+        <item android:id="@+id/navPdf"
+            android:title="@string/PDFs"
+            android:icon="@drawable/pdf"/>
 
-        <item android:id="@+id/navShare"
-            android:title="@string/share"
-            android:icon="@drawable/ic_share"/>
+        <item android:id="@+id/navQuestions"
+            android:title="@string/sample_questions"
+            android:icon="@drawable/questions"/>
 
         <item android:id="@+id/navTerms"
             android:title="@string/terms_and_conditions"
             android:icon="@drawable/terms"/>
 
-        <item android:id="@+id/navContactus"
-            android:title="@string/contact_us"
-            android:icon="@drawable/contact"/>
+
 
     <!-- Divider (space) -->
     <item android:title=" "/>
@@ -38,6 +38,10 @@
 
     <group android:id="@+id/group1">
 
+
+        <item android:id="@+id/navContactus"
+            android:title="@string/contact_us"
+            android:icon="@drawable/contact"/>
 
         <item android:id="@+id/navSettings"
             android:title="@string/settings"

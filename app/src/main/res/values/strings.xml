@@ -67,6 +67,8 @@
     <string name="log_out">Log Out</string>
     <string name="home_fragment">Home Fragment</string>
     <string name="user_email">User Email</string>
+    <string name="PDFs">PDF</string>
+    <string name="sample_questions">Samples Questions</string>
 
 
 </resources>

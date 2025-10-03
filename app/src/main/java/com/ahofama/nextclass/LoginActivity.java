@@ -160,7 +160,7 @@ public class LoginActivity extends AppCompatActivity {
             intent = new Intent(this, DashboardActivity.class);
         } catch (Exception e) {
             // DashboardActivity doesn't exist, use ProfileActivity
-            intent = new Intent(this, ProfileFragment.class);
+            intent = new Intent(this, ProfileFragment2.class);
         }
 
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
